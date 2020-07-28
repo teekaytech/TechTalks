@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Add bootstrap 
-gem 'bootstrap', '~> 4.5.0'
+gem 'bootstrap', '~> 4.5'
 gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 
 group :development, :test do
