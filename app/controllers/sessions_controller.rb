@@ -3,19 +3,20 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(username: params[:session][:username])
-    if user
-      helpers.log_in user
-      flash.now[:success] = "Welcome back, #{user.username}"
-      redirect_to user
+    @user = User.find_by(username: params[:session][:username])
+    if @user
+      helpers.log_in @user
+      flash.notice = "Welcome back, #{@user.username}!"
+      redirect_to @user
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = 'Invalid username..., try again.'
       render 'new'
     end
   end
 
   def destroy
     helpers.log_out
+    flash.notice = 'You are logged out. Thank you.'
     redirect_to root_url
   end
 end

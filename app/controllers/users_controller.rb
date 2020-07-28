@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user, except: %i[new create]
+  before_action :authenticate_user, only: %i[index show]
   def index
     @user = User.all
   end
@@ -12,7 +12,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = 'Welcome to TechTalks!'
-      redirect_to @user
+      helpers.log_in @user
+      redirect_to user_path(@user)
     else
       render 'new'
     end
