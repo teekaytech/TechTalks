@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
   </head>
 
-  <body class="">
+  <body>
     <header>
       <%= render 'layouts/header' %>
     </header>
@@ -20,7 +20,7 @@
         <%= yield %>
       </div>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
       <%= render 'layouts/footer' %>
     </footer>
   </body>

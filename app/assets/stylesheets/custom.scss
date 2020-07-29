@@ -1,44 +1,83 @@
 $grey-header: #999999;
 $text-yellow: #cf8417;
 $text-hover: #da4617;
+$bg-color: hsl(31, 51%, 9%);
 
-.header-nav {
-  color: $grey-header;
+@mixin flex-style {
   display: flex;
   justify-content: space-between;
-  padding: 0.5em;
-  
-  ul li {
-    display: inline-block;
-    list-style: none;
-    a {
-      text-transform: uppercase;
-      margin-right: 0.7em;
-      font-size: 0.9em;
-      color: $grey-header;
-      text-decoration: none;
-      font-weight: bold;
-      &:hover {
-        color: $text-hover;
+}
+
+@mixin hover-style {
+  cursor: pointer;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  border: 0.5em solid $bg-color;
+  .header-nav {
+    color: $grey-header;
+    padding: 0.5em;
+    @include flex-style;
+    ul li {
+      display: inline-block;
+      list-style: none;
+      a {
+        text-transform: uppercase;
+        margin-right: 0.7em;
+        font-size: 0.9em;
+        color: $grey-header;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+          color: $text-hover;
+        }
       }
     }
+    .h-item {
+      align-self: center;
+    }
+    .logo {
+      width: 70%;
+    }
+    .itm1, .itm3 {
+      width: 22%;
+    }
+    .itm2 {
+      width: 56%;
+      text-align: center;
+      padding-top: 0.9em;
+    }
+    .itm3 {
+      text-align: right;
+      padding-top: 0.9em;
+    }
   }
-  .h-item {
-    align-self: center;
+  .footer {
+    background-color: $bg-color;
+    @include flex-style;
+    .f-logo {
+      width: 65%;
+    }
+    .socials {
+      color: $text-hover;
+      font-size: 1.8em;
+      padding-right: 0.3em;
+      &:hover {
+        @include hover-style;
+      }
+    }
+    .copy {
+      color: $text-hover;
+      padding-right: 0.7em;
+      &:hover {
+        @include hover-style;
+      }
+    }
+    .footer-text {
+      font-size: small;
+    }
   }
-  .logo {
-    width: 70%;
-  }
-  .itm1, .itm3 {
-    width: 20%;
-  }
-  .itm2 {
-    width: 60%;
-    text-align: center;
-    padding-top: 0.9em;
-  }
-  .itm3 {
-    text-align: right;
-    padding-top: 0.9em;
-  }
+
 }
