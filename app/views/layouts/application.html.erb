@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TechTalks</title>
+    <title>Tech Talks</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
   </head>
 
-  <body>
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/flash_messages' %>
-    <div class="container">
-      <%= yield %>
-    </div>
-    <%= render 'layouts/footer' %>
+  <body class="">
+    <header>
+      <%= render 'layouts/header' %>
+    </header>
+    <main>
+      <%= render 'layouts/flash_messages' %>
+      <div class="container ">
+        <%= yield %>
+      </div>
+    </main>
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>

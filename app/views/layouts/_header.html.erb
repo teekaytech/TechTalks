@@ -1,7 +1,20 @@
-<% if current_user%>
-  <li class="nav-item pr-3"><%= link_to "#{current_user.username}'s page", user_path(current_user), class: "text-decoration-none" %></li>
-  <li class="nav-item"><%= link_to "logout", logout_path(current_user), method: :delete, class: " text-decoration-none" %></li>
-<%else%>
-  <li class="nav-item pr-3"><%= link_to "Login", login_path, class: "text-decoration-none"%></li> 
-  <li class="nav-item"><%= link_to "Sign up", new_user_path, class: "text-decoration-none"%></li>
-<%end%>
+<nav class="header-nav">
+  <div class="h-item itm1"><%= image_tag 'techtalk_logo.png', class: 'logo img-fluid' %></div>
+  <ul class="h-item itm2">
+    <% categories.each do |category| %>
+      <li><%= link_to category.name %></li>
+    <% end %>
+  </ul>
+  <div class="h-item itm3">
+    <ul>
+      <% if current_user%>
+        <li class="nav-item"><%= link_to "#{current_user.username}'s page", user_path(current_user) %></li>
+        <li class="nav-item"><%= link_to "logout", logout_path(current_user), method: :delete %></li>
+      <%else%>
+        <li class="nav-item"><%= link_to "Login", login_path %></li>| 
+        <li class="nav-item"><%= link_to "Register", new_user_path %></li>
+      <%end%>
+      <i class="fa fa-search pr-3" aria-hidden="true"></i>
+    </ul>
+  </div>
+</nav>

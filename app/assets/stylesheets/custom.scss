@@ -1,0 +1,44 @@
+$grey-header: #999999;
+$text-yellow: #cf8417;
+$text-hover: #da4617;
+
+.header-nav {
+  color: $grey-header;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  
+  ul li {
+    display: inline-block;
+    list-style: none;
+    a {
+      text-transform: uppercase;
+      margin-right: 0.7em;
+      font-size: 0.9em;
+      color: $grey-header;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        color: $text-hover;
+      }
+    }
+  }
+  .h-item {
+    align-self: center;
+  }
+  .logo {
+    width: 70%;
+  }
+  .itm1, .itm3 {
+    width: 20%;
+  }
+  .itm2 {
+    width: 60%;
+    text-align: center;
+    padding-top: 0.9em;
+  }
+  .itm3 {
+    text-align: right;
+    padding-top: 0.9em;
+  }
+}
