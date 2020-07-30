@@ -20,8 +20,7 @@ class ApplicationController < ActionController::Base
       flash[:success] = 'Article created successfully.'
       redirect_to root_path
     else
-      flash[:danger] = 'Article could not be created, please try again.'
-      redirect_back fallback_location: new_user_article_path
+      render action: :new
     end
   end
 end

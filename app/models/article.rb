@@ -1,24 +1,20 @@
 class Article < ApplicationRecord
-  validates :title, :text, :image, presence: true
-  validates :title, length: { in: 6..50 }
-  validates :text, length: { in: 20..255 }
+  validates :title, presence: true, length: { minimum: 6 }
+  validates :text, presence: true, length: { minimum: 20 }
   mount_uploader :image, ImageUploader
+  validates_processing_of :image
+  validate :image_size_validation
 
   belongs_to :author, class_name: 'User'
   has_many :votes, dependent: :destroy
   has_many :article_categories, dependent: :destroy
   has_many :categories, through: :article_categories
 
-  def self.create_article_with_categories(article, categories)
-    if article.save
-      categories.each_value do |cat_id|
-        ArticleCategory.create(article_id: article.id, category_id: cat_id)
-      end
-      flash[:success] = 'Article created successfully.'
-      redirect_to root_path
-    else
-      flash[:danger] = 'Article could not be created, please try again.'
-      redirect_back fallback_location: new_user_article_path
-    end
+  private
+
+  def image_size_validation
+    return true unless image.size > 0.5.megabytes
+
+    errors[:image] << 'should not be more than 500KB'
   end
 end

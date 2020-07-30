@@ -1,4 +1,8 @@
-<div class="offset-3 col-6 new-article mt-5 border border-danger rounded p-4">
-  <h5 class="text-center my-3">Create a new article</h5>
-  <%= render partial: 'form' %>
+<div class="offset-2 col-8 new-article mt-5 border border-danger rounded p-0">
+  <h5 class="text-center text-white py-3 bg-danger">Create a new article</h5>
+  <%= render 'articles/error_messages' %>
+  <div class="p-3">
+    <%= render partial: 'form' %>
+  </div>
+  
 </div>

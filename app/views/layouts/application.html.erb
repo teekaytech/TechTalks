@@ -15,10 +15,9 @@
       <%= render 'layouts/header' %>
       <div class="border border-danger"></div>
     </header>
-    
+    <%= render 'layouts/flash_messages' %>
     <main>
-      <%= render 'layouts/flash_messages' %>
-      <div class="">
+      <div>
         <%= yield %>
       </div>
     </main>

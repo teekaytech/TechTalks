@@ -6,12 +6,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    @article = current_user.articles.build(article_params)
     if params[:categories].nil?
       flash[:danger] = 'Please select at least one category.'
-      redirect_back fallback_location: new_user_article_path
+      render action: :new
     else
-      article = current_user.articles.build(article_params)
-      store_article_with_categories(article, params[:categories])
+      store_article_with_categories(@article, params[:categories])
     end
   end
 
