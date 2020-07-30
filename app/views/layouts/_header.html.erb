@@ -1,14 +1,9 @@
 <nav class="header-nav">
-  <div class="h-item itm1"><%= image_tag 'techtalk_logo.png', class: 'logo img-fluid' %></div>
-  <ul class="h-item itm2">
-    <% categories.each do |category| %>
-      <li><%= link_to category.name, category_path(category) %></li>
-    <% end %>
-  </ul>
-  <div class="h-item itm3">
+  <div class="h-item itm1"><%= image_tag 'techtalk_logo.png', class: 'w-25 img-fluid' %></div>
+  <div class="h-item itm2">
     <ul>
+      <li class="nav-item"><%= link_to "home", root_url %></li>
       <% if current_user %>
-        <li class="nav-item"><%= link_to "home", root_url %></li>
         <li class="nav-item"><%= link_to 'Write an Article', new_user_article_path(current_user) %></li>
         <li class="nav-item"><%= link_to "logout", logout_path(current_user), method: :delete %></li>
       <%else%>

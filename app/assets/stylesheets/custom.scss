@@ -40,12 +40,12 @@ body {
     .logo {
       width: 70%;
     }
-    .itm1, .itm3 {
-      width: 22%;
+    .itm1 {
+      width: 50%;
     }
     .itm2 {
-      width: 56%;
-      text-align: center;
+      width: 50%;
+      text-align: right;
       padding-top: 0.9em;
     }
     .itm3 {
@@ -54,6 +54,9 @@ body {
     }
   }
   .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: $bg-color;
     @include flex-style;
     .f-logo {

@@ -12,31 +12,35 @@
   <% end %>
   <div>
     <div class="form-group">
-      <%= f.label :title %>
+      <%= f.label :title, 'Title:' %>
       <%= f.text_field :title,
                 required: true,
                 autofocus: true, autocomplete: "title", class: "form-control"%>
     </div>
 
     <div class="form-group">
-      <%= f.label :Body %>
+      <%= f.label :text, 'Body:' %>
       <%= f.text_area :text,
                 required: true, autocomplete: "text", class: "form-control"%>
     </div>
 
     <div class="form-group">
-      <%= f.label :Categories, 'Select a Category' %><br />
-      <% categories.each do |category| %>
-        <%= check_box_tag("categories[#{category.id}]", category.id) %>
-        <%= label_tag(category.name) %> 
-      <% end %>
+      <%= f.label :Categories, 'Select a ategory:' %><br />
+      <div class="row">
+        <% categories.each_with_index do |category| %>
+          <div class="col-4">
+            <%= check_box_tag("categories[#{category.id}]", category.id) %>
+            <%= label_tag(category.name) %> 
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
   <p>
-    <%= f.label :image, 'Attach the article image' %><br />
-    <%= f.file_field :image, required: true, class: 'form-control' %>
+    <%= f.label :image, 'Attach the article image:' %>
+    <%= f.file_field :image, required: true %>
   </p>
-  <p>
-    <%= f.submit "Create Article" %>
+  <p class="d-flex justify-content-end">
+    <%= f.submit "Create Article", class: 'btn btn-success align-left' %>
   </p>
 <% end %>

@@ -13,14 +13,16 @@
   <body>
     <header>
       <%= render 'layouts/header' %>
+      <div class="border border-danger"></div>
     </header>
+    
     <main>
       <%= render 'layouts/flash_messages' %>
-      <div class="container ">
+      <div class="">
         <%= yield %>
       </div>
     </main>
-    <footer class="fixed-bottom">
+    <footer class="footer px-3">
       <%= render 'layouts/footer' %>
     </footer>
   </body>
