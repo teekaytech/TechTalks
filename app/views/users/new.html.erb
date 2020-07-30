@@ -1,19 +1,29 @@
-<h2 class="text-center">New user registration page</h2>
-<div class="row">
-  <div class="col-md-4 offset-4">
+<div class="container mt-5 my-5">
+  <div class="offset-3 col-6 border border-danger rounded p-0">
+    <h5 class="text-center bg-danger py-3 text-white font-weight-bold">New User</h5>
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'users/error_messages' %>
+      <div class="px-4 mt-4">
+        <div class="form-group mb-4">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control', required: true %>
+        </div>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'mb-4 form-control' %>
+        <div class="form-group mb-4">
+          <%= f.label :username %>
+          <%= f.text_field :username, class:'form-control', required: true %>
+        </div>
 
-      <%= f.label :username %>
-      <%= f.text_field :username, class: 'mb-4 form-control' %>
+        <div class="form-group mb-4">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control', required: true %>
+        </div>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'mb-4 form-control' %>
-
-      <%= f.submit "Create my account", class: "mt-2 btn btn-primary" %>
+        <div class="form-group text-right">
+          <%= link_to "Login", login_path, class: 'pr-2 text-danger' %>
+          <%= f.submit "Create account", class: "my-2 btn btn-danger" %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

@@ -1,13 +1,19 @@
-<h1 class='text-center'>Log in</h1>
-<div class="row">
-  <div class="col-md-6 offset-3">
+<div class="container mt-5 my-5">
+  <div class="offset-3 col-6 border border-danger rounded p-0">
+    <h5 class="text-center bg-danger py-3 text-white font-weight-bold">Log in</h5>
     <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 
-      <%= f.label :username %>
-      <%= f.text_field :username, class: 'form-control' %>
+    <div class="px-4 mt-4">
+      <div class="form-group">
+        <%= f.label :username %>
+        <%= f.text_field :username, class: 'form-control' %>
+      </div>
 
-      <%= f.submit "Log in", class: " mt-2 btn btn-primary" %>
+      <div class="form-group text-right">
+      <%= link_to "Register", new_user_path, class: 'pr-2 text-danger' %>
+        <%= f.submit "Log in", class: " mt-2 btn btn-danger" %>
+      </div>
+    </div> 
     <% end %>
-
   </div>
 </div>
