@@ -2,8 +2,7 @@ class Article < ApplicationRecord
   validates :title, :text, :image, presence: true
   validates :title, length: { in: 6..50 }
   validates :text, length: { in: 20..255 }
-  validates :image, format: { with: %r{.(png|jpg|jpeg)$}i, multiline: true,
-                              message: 'Image must be gif, png or jpg format' }
+  mount_uploader :image, ImageUploader
 
   belongs_to :author, class_name: 'User'
   has_many :votes, dependent: :destroy
