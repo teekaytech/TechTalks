@@ -4,25 +4,28 @@
     <title>Tech Talks</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%# <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
   </head>
 
-  <body>
+  <body class='f-container'>
     <header>
       <%= render 'layouts/header' %>
-      <div class="border border-danger"></div>
+      <div class="p-color"></div>
     </header>
-    <%= render 'layouts/flash_messages' %>
-    <main>
+    <main class="main">
+      <%= render 'layouts/flash_messages' %>
       <div>
         <%= yield %>
       </div>
     </main>
-    <footer class="footer px-3">
+    <footer class="footer fixed-bottom px-3">
       <%= render 'layouts/footer' %>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>

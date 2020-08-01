@@ -16,7 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     helpers.log_out
-    flash.notice = 'You are logged out. Thank you.'
     redirect_to root_url
   end
 end
