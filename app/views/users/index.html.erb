@@ -1,9 +1,12 @@
 <section class="d-flex">
   <article class="flex-grow-1 featured-article">
-    <% if !featured_article.nil? %>
-      <%= image_tag featured_article.image.banner.url, class: 'w-100 h-100 f-image img-fluid'%>
-      <%#= featured_article.title %>
-    <% end %>
+    <%= image_tag featured_article.nil? ? 'default_banner.jpg' : featured_article.image.banner.url, 
+      class: 'w-100 h-100 f-image img-fluid' %>
+    <div class="title">
+      <h5 class="t-header ml-3">
+        <%= featured_article.nil? ? 'Welcome to TechTalks' : featured_article.title %>
+      </h5>
+    </div>
   </article>
   <article class="flex-grow-3 p-4 all-categories">
     <h5 class="mb-3 font-weight-bold">All Categories</h5>
