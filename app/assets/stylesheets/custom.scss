@@ -1,3 +1,12 @@
+/* Reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 $grey-header: #999999;
 $text-hover: #fd6000;
 $bg-color: #4e443e;
@@ -18,15 +27,6 @@ $bg-color: #4e443e;
 	float: none !important; 
 }
 
-/* Reset */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   @include view-default;
   .header-nav {
@@ -37,12 +37,12 @@ body {
       display: inline-block;
       list-style: none;
       a {
-        text-transform: uppercase;
-        margin-right: 0.7em;
-        font-size: 0.9em;
-        color: $grey-header;
-        text-decoration: none;
-        font-weight: bold;
+          text-transform: uppercase;
+          margin-right: 0.7em;
+          font-size: 0.9em;
+          color: $grey-header;
+          text-decoration: none;
+          font-weight: bold;
         &:hover {
           color: $text-hover;
         }

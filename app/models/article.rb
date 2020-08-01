@@ -10,6 +10,8 @@ class Article < ApplicationRecord
   has_many :article_categories, dependent: :destroy
   has_many :categories, through: :article_categories
 
+  scope :recent_article, -> { order(created_at: :desc).first }
+
   private
 
   def image_size_validation

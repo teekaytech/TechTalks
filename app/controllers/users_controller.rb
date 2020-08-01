@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user, only: %i[show]
   def index
     @user = User.all
+    @articles = Article.all
   end
 
   def new

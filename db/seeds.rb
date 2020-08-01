@@ -12,7 +12,7 @@ Category.destroy_all
 User.destroy_all
 
 categories = %i[
-  Communication
+  ICT/Coding
   Construction
   Manufacturing
   Transportation
@@ -20,5 +20,12 @@ categories = %i[
   Bio-Related
 ]
 5.times do |index|
-  Category.create(name: categories[index], priority: index)
+  Category.create(name: categories[index], priority: index + 1)
 end
+
+User.create(name: 'Taofeek Olalere', username: 'teekaytech',
+            email: 'olaleretaofeek@live.com')
+User.create(name: 'Adam Smith', username: 'adamsmith',
+            email: 'adamsmith@gmail.com')
+User.create(name: 'John Doe', username: 'johndoe456',
+            email: 'john@yahoo.com.com')

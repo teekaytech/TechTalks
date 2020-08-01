@@ -1,3 +1,24 @@
-<div class="home">
-<h1 class="h3">Home Page</h1>
-</div>
+<section class="d-flex">
+  <article class="flex-grow-1 featured-article">
+    <% if !featured_article.nil? %>
+      <%= image_tag featured_article.image.banner.url, class: 'w-100 h-100 f-image img-fluid'%>
+      <%#= featured_article.title %>
+    <% end %>
+  </article>
+  <article class="flex-grow-3 p-4 all-categories">
+    <h5 class="mb-3 font-weight-bold">All Categories</h5>
+    <% categories.each do |category| %>
+      <%= link_to category_path(category), class: '' do %>
+        <p><%= category.name %>(<%= category.articles.size %>)</p>
+      <% end %>
+    <% end %>
+  </article>
+</section>
+<section class="d-flex">
+  <% categories_by_priority.each do |category| %>
+    <article class="flex-grow-1 border border-danger articles-thumb">
+      <%= category.name %>
+    </article>
+  <% end %>
+  <%#= render 'categories/cat_with_feature' %>
+</section>
