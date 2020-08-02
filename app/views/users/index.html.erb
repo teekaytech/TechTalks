@@ -19,8 +19,12 @@
 </section>
 <section class="d-flex">
   <% categories_by_priority.each do |category| %>
-    <article class="flex-grow-1 border border-danger articles-thumb">
-      <%= category.name %>
+    <article class="articles-thumb text-white font-weight-bolder">
+      <% if !category_with_recent_article(category).nil? %>
+        <%= image_tag category_with_recent_article(category).image.thumb.url, class: 'w-100 h-100 f-image img-fluid' %>
+        <h5 class="article-details"><%= category.name %></h5>
+        <p class="details-title"><%= category_with_recent_article(category).title %><p>
+      <% end %>
     </article>
   <% end %>
   <%#= render 'categories/cat_with_feature' %>

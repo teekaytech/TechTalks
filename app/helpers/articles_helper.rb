@@ -7,4 +7,9 @@ module ArticlesHelper
     end
     featured_article
   end
+
+  def recent_article(article)
+    most_recent = article.maximum('created_at')
+    article.where(created_at: most_recent).first
+  end
 end

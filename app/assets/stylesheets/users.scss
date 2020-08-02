@@ -37,5 +37,22 @@ $bg-color: #4e443e;
 }
 
 .articles-thumb {
-  height: 12.5em;
+  height: 15em;
+  display: inline-block;
+  width: 20%;
+  position: relative;
+  .article-details {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-decoration-color: rgb(255, 208, 0);
+    text-decoration-thickness: 20%;
+  }
+  .details-title {
+    position: absolute;
+    bottom: 0.5em;
+    left: 0.5em;
+  }
 }
