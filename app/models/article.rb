@@ -10,7 +10,7 @@ class Article < ApplicationRecord
   has_many :article_categories, dependent: :destroy
   has_many :categories, through: :article_categories
 
-  # scope :recent_article, -> { order(created_at: :desc).first }
+  scope :sort_by_most_recent, -> { order(created_at: :desc) }
 
   private
 

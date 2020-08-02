@@ -1,6 +1,6 @@
 <div class="container-fluid p-0">
   <div class="row m-0">
-    <% @category.articles.each do |article| %>
+    <% @category.articles.sort_by_most_recent.each do |article| %>
     <article class="col-md-3 p-0">
       <%= image_tag article.image.ishow.url, class: 'img-fluid' %> 
     </article>
