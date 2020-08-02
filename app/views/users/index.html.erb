@@ -11,7 +11,7 @@
   <article class="flex-grow-3 p-4 all-categories">
     <h5 class="mb-3 font-weight-bold">All Categories</h5>
     <% categories.each do |category| %>
-      <%= link_to category_path(category), class: '' do %>
+      <%= link_to category_path(category) do %>
         <p><%= category.name %>(<%= category.articles.size %>)</p>
       <% end %>
     <% end %>
@@ -20,7 +20,7 @@
 <section class="d-flex">
   <% categories_by_priority.each do |category| %>
     <article class="articles-thumb text-white font-weight-bolder">
-      <h5 class="article-details"><%= category.name %></h5>
+    <%= link_to category.name, category_path(category), class: 'article-details text-white' %>
       <% if !category_with_recent_article(category).nil? %>
         <%= image_tag category_with_recent_article(category).image.thumb.url, class: 'w-100 h-100 f-image img-fluid' %>
         <p class="details-title"><%= category_with_recent_article(category).title %><p>
