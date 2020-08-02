@@ -49,6 +49,7 @@ $bg-color: #4e443e;
     font-weight: bolder;
     text-decoration-color: rgb(255, 208, 0);
     text-decoration-thickness: 20%;
+    text-shadow: 0.06em 0.08em $text-hover;
   }
   .details-title {
     position: absolute;
