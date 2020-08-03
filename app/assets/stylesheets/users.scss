@@ -46,7 +46,7 @@ $bg-color: #4e443e;
 }
 
 .articles-thumb {
-  height: 15em;
+  height: 14em;
   display: inline-block;
   width: 20%;
   position: relative;
@@ -71,5 +71,13 @@ $bg-color: #4e443e;
       text-shadow: 0.06em 0.08em $text-hover;
     }
   }
+}
 
+.b-color {
+  border: 0.2em solid #fd6000;
+  border-radius: 0.5em;
+}
+
+.m-color {
+  background-color: #fd6000;
 }
