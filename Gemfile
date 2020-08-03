@@ -34,15 +34,15 @@ gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 
 # Add carrierwave for image processing
 gem 'carrierwave', '~> 0.11.2'
-gem 'mini_magick', '~> 4.3'
 gem 'figaro'
+gem 'mini_magick', '~> 4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'fog-aws'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'shoulda-matchers'
-  gem 'fog-aws'
 end
 
 group :development do

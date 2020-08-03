@@ -1,27 +1,47 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$grey-header: #999999;
+$grey-header: #999;
 $text-hover: #fd6000;
 $bg-color: #4e443e;
 
+.all-categories {
+  background-color: #f1d79e;
+
+  a {
+    text-decoration: none;
+    color: $text-hover;
+    font-weight: bold;
+    font-style: italic;
+
+    &:hover {
+      color: $grey-header;
+    }
+  }
+}
+
 .b-container {
   background-color: $bg-color;
+
   .featured-article {
     position: relative;
     height: 28em;
+
     .f-image {
       height: 100%;
     }
+
     .title {
       position: absolute;
       bottom: 1em;
+
       .t-header {
         font-weight: bolder;
         color: $text-hover;
         text-shadow: 0.06em 0.08em $bg-color;
         font-size: 3em;
       }
+
       a {
         &:hover {
           text-decoration: none;
@@ -32,24 +52,12 @@ $bg-color: #4e443e;
   }
 }
 
-.all-categories {
-  background-color: #f1d79e;
-  a {
-    text-decoration: none;
-    color: $text-hover;
-    font-weight: bold;
-    font-style: italic;
-    &:hover {
-      color: $grey-header;
-    }
-  }
-}
-
 .articles-thumb {
   height: 14em;
   display: inline-block;
   width: 20%;
   position: relative;
+
   .article-details {
     position: absolute;
     top: 0.5em;
@@ -57,15 +65,16 @@ $bg-color: #4e443e;
     text-decoration: underline;
     font-weight: bolder;
     text-decoration-color: rgb(255, 208, 0);
-    text-decoration-thickness: 20%;
     text-shadow: 0.06em 0.08em $text-hover;
   }
+
   .details-title {
     text-decoration: none;
     color: $text-hover;
     position: absolute;
     bottom: 1em;
     left: 0.5em;
+
     &:hover {
       color: white;
       text-shadow: 0.06em 0.08em $text-hover;

@@ -1,13 +1,13 @@
 /* Reset */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-$grey-header: #999999;
+$grey-header: #999;
 $text-hover: #fd6000;
 $bg-color: #4e443e;
 
@@ -23,64 +23,80 @@ $bg-color: #4e443e;
 
 @mixin view-default {
   max-width: 1920px;
-  margin: 0 auto !important; 
-	float: none !important; 
+  margin: 0 auto !important;
+  float: none !important;
 }
 
 body {
   @include view-default;
+
   .header-nav {
     color: $grey-header;
     padding: 0.5em;
+
     @include flex-style;
+
     ul li {
       display: inline-block;
       list-style: none;
+
       a {
-          text-transform: uppercase;
-          margin-right: 0.7em;
-          font-size: 0.9em;
-          color: $grey-header;
-          text-decoration: none;
-          font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 0.7em;
+        font-size: 0.9em;
+        color: $grey-header;
+        text-decoration: none;
+        font-weight: bold;
+
         &:hover {
           color: $text-hover;
         }
       }
     }
+
     .logo {
       width: 70%;
     }
   }
+
   .main {
     padding-bottom: 3em;
   }
+
   .footer {
     background-color: $bg-color;
+
     @include flex-style;
     @include view-default;
+
     .f-logo {
       width: 65%;
     }
+
     .socials {
       color: $text-hover;
       font-size: 1.8em;
       padding-right: 0.3em;
+
       &:hover {
         @include hover-style;
       }
     }
+
     .copy {
       color: $text-hover;
       padding-right: 0.7em;
+
       &:hover {
         @include hover-style;
       }
     }
+
     .footer-text {
       font-size: small;
     }
   }
+
   .p-color {
     border: 2px solid $text-hover;
   }
