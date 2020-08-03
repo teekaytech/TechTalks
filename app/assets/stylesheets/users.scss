@@ -21,8 +21,15 @@ $bg-color: #4e443e;
       text-shadow: 0.06em 0.08em $bg-color;
       font-size: 3em;
     }
+    a {
+      &:hover {
+        text-decoration: none;
+        color: $grey-header;
+      }
+    }
   }
 }
+
 .all-categories {
   background-color: #f1d79e;
   a {
@@ -52,8 +59,15 @@ $bg-color: #4e443e;
     text-shadow: 0.06em 0.08em $text-hover;
   }
   .details-title {
+    text-decoration: none;
+    color: $text-hover;
     position: absolute;
-    bottom: 0.5em;
+    bottom: 1em;
     left: 0.5em;
+    &:hover {
+      color: white;
+      text-shadow: 0.06em 0.08em $text-hover;
+    }
   }
+
 }

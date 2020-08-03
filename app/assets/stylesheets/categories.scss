@@ -12,6 +12,10 @@ $bg-color: #4e443e;
   text-decoration: underline $text-hover;
 }
 
+a.read-more {
+  color: $text-hover;
+}
+
 .a-title {
   font-size: 1.2em;
   font-weight: bolder;

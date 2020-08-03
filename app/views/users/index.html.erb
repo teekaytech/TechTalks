@@ -3,9 +3,11 @@
     <%= image_tag featured_article.nil? ? 'default_banner.jpg' : featured_article.image.banner.url, 
       class: 'w-100 h-100 f-image img-fluid' %>
     <div class="title">
-      <h5 class="t-header ml-3">
-        <%= featured_article.nil? ? 'Welcome to TechTalks' : featured_article.title %>
-      </h5>
+        <% if featured_article.nil? %>
+          <p class='t-header ml-3'>Welcome to TechTalks</p>
+        <% else %>
+          <%= link_to featured_article.title, user_article_path(current_user, featured_article), class: 't-header ml-3' %>
+        <% end %>
     </div>
   </article>
   <article class="flex-grow-3 p-4 all-categories">
@@ -23,7 +25,7 @@
     <%= link_to category.name, category_path(category), class: 'article-details text-white' %>
       <% if !category_with_recent_article(category).nil? %>
         <%= image_tag category_with_recent_article(category).image.thumb.url, class: 'w-100 h-100 f-image img-fluid' %>
-        <p class="details-title"><%= category_with_recent_article(category).title %><p>
+        <%= link_to category_with_recent_article(category).title,  user_article_path(current_user, category_with_recent_article(category)), class: 'details-title' %>
       <% else %>
         <%= image_tag 'default_logo.png', class: 'mt-4 img-fluid' %> 
       <% end %>

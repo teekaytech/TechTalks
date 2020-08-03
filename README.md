@@ -12,8 +12,7 @@
 - PGSQL
 
 ## Live Demo
-
-[TeckTalks!]()
+[TeckTalks!](https://vast-citadel-76441.herokuapp.com/)
 
 
 ## Getting Started
