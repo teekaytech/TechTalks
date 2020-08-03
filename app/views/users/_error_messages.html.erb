@@ -2,7 +2,7 @@
   <div id="error_explanation">
     <ul>
     <% @user.errors.full_messages.each do |message| %>
-      <li class='text-danger'><%= message %></li>
+      <li class='text-danger list-unstyled ml-3'><%= message %></li>
     <% end %>
     </ul>
   </div>

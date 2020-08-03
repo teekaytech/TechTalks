@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user
     return unless helpers.current_user.nil?
 
-    flash.notice = 'You need to login'
+    flash[:info] = 'You need to login'
     redirect_to login_path
   end
 
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
         article.article_categories.build(category_id: cat_id).save
       end
       flash[:success] = 'Article created successfully.'
-      redirect_to root_path
+      redirect_to users_path
     else
       render action: :new
     end

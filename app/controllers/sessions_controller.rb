@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(username: params[:session][:username])
     if @user
-      helpers.log_in @user
-      flash.notice = "Welcome back, #{@user.username}!"
-      redirect_to @user
+      helpers.log_in(@user)
+      flash[:success] = "Welcome back, #{@user.username}!"
+      redirect_to users_path
     else
       flash.now[:danger] = 'Invalid username..., try again.'
       render 'new'

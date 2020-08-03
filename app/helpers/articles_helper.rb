@@ -3,7 +3,10 @@ module ArticlesHelper
     featured_article = nil
     votes = 0
     Article.all.each do |article|
-      featured_article = article if article.votes.size > votes
+      if article.votes.size > votes
+        featured_article = article
+        votes = article.votes.size
+      end
     end
     featured_article
   end

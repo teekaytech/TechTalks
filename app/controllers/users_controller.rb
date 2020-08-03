@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user, only: %i[show]
+  before_action :authenticate_user, only: %i[show index]
   def index
     @user = User.all
     @articles = Article.all
@@ -13,8 +13,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = 'Welcome to TechTalks!'
-      helpers.log_in @user
-      redirect_to user_path(@user)
+      helpers.log_in(@user)
+      redirect_to users_path
     else
       render 'new'
     end

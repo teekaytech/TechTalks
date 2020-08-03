@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light header-nav">
-  <%= link_to root_path, class: 'navbar-brand' do %>
+  <%= link_to users_path, class: 'navbar-brand' do %>
     <%= image_tag 'techtalk.png', class: 'w-75 img-fluid' %>
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +7,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class='navbar-nav ml-auto'>
-      <li class="nav-item"><%= link_to "home", root_url %></li>
+      <li class="nav-item"><%= link_to "home", users_path %></li>
       <% if current_user %>
         <li class="nav-item"><%= link_to 'Write an Article', new_user_article_path(current_user) %></li>
         <li class="nav-item"><%= link_to "logout", logout_path(current_user), method: :delete %></li>

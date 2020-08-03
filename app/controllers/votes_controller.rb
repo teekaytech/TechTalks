@@ -5,7 +5,7 @@ class VotesController < ApplicationController
     return unless @vote.save
 
     flash[:success] = 'Voting successful'
-    redirect_to root_path
+    redirect_to users_path
   end
 
   private
