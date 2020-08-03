@@ -7,7 +7,7 @@
     <article class="col-md-3 p-3">
       <h2 class='c-name mb-3'><%= @category.name %></h2>
       <h5 class='a-title'><%= article.title %></h5>
-      <p class='mb-3'><%= article.text.truncate(100) %></p>
+      <p class='mb-3'><%= article.text.truncate(50) %></p>
       <span class='font-italic mb-2 mr-3'>Author: 
         <strong><%= article.author.name %></strong>
       </span>
