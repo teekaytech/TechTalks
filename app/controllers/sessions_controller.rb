@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
-  def new; end
+  def new
+    @users = User.all
+  end
 
   def create
     @user = User.find_by(username: params[:session][:username])

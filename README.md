@@ -12,8 +12,7 @@
 - PGSQL
 
 ## Live Demo
-
-[TeckTalks!]()
+[TeckTalks!](https://vast-citadel-76441.herokuapp.com/)
 
 
 ## Getting Started
@@ -77,7 +76,7 @@ Open `http://localhost:3000/` in your browser.
 
 ### Video Demo
 
-TBA
+[TechTalks](https://www.loom.com/share/7a118a3a1cc84674ae106f9eeed48bb2)
 
 ## Author
 
@@ -100,9 +99,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-[Microverse](https://.microverse.org/)
-[Design Idea by Nelson Sakwa on Behance](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
-[Full project specification](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561)
+- [Microverse](https://.microverse.org/)
+- [Design Idea by Nelson Sakwa on Behance](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+- [Full project specification](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561)
 
 ## 📝 License
 

@@ -15,6 +15,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def show
+    @article = Article.includes(:author).find(params[:id])
+  end
+
   private
 
   def article_params
