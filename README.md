@@ -76,7 +76,7 @@ Open `http://localhost:3000/` in your browser.
 
 ### Video Demo
 
-TBA
+[TechTalks](https://www.loom.com/share/7a118a3a1cc84674ae106f9eeed48bb2)
 
 ## Author
 
