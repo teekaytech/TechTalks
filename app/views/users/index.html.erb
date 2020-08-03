@@ -1,5 +1,5 @@
-<section class="d-flex">
-  <article class="flex-grow-1 featured-article">
+<section class="container-fluid px-5 b-container">
+  <article class="col-md-12 featured-article">
     <%= image_tag featured_article.nil? ? 'default_banner.jpg' : featured_article.image.banner.url, 
       class: 'w-100 h-100 f-image img-fluid' %>
     <div class="title">
@@ -9,14 +9,6 @@
           <%= link_to featured_article.title, user_article_path(current_user, featured_article), class: 't-header ml-3' %>
         <% end %>
     </div>
-  </article>
-  <article class="flex-grow-3 p-4 all-categories">
-    <h5 class="mb-3 font-weight-bold">All Categories</h5>
-    <% categories.each do |category| %>
-      <%= link_to category_path(category) do %>
-        <p><%= category.name %>(<%= category.articles.size %>)</p>
-      <% end %>
-    <% end %>
   </article>
 </section>
 <section class="d-flex">

@@ -5,26 +5,28 @@ $grey-header: #999999;
 $text-hover: #fd6000;
 $bg-color: #4e443e;
 
-.featured-article {
-  position: relative;
-  height: 28em;
-  .f-image {
-    height: 100%;
-  }
-  
-  .title {
-    position: absolute;
-    bottom: 1em;
-    .t-header {
-      font-weight: bolder;
-      color: $text-hover;
-      text-shadow: 0.06em 0.08em $bg-color;
-      font-size: 3em;
+.b-container {
+  background-color: $bg-color;
+  .featured-article {
+    position: relative;
+    height: 28em;
+    .f-image {
+      height: 100%;
     }
-    a {
-      &:hover {
-        text-decoration: none;
-        color: $grey-header;
+    .title {
+      position: absolute;
+      bottom: 1em;
+      .t-header {
+        font-weight: bolder;
+        color: $text-hover;
+        text-shadow: 0.06em 0.08em $bg-color;
+        font-size: 3em;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+          color: $grey-header;
+        }
       }
     }
   }

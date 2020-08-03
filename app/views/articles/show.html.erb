@@ -1,2 +1,13 @@
-show article
-<%= @article.title %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <%= image_tag @article.image.banner.url, class: 'w-100 h-100 f-image img-fluid' %>
+    </div>
+    <div class="col-md-12">
+      <h2 class='mt-3 title'><%= @article.title %></h2>
+      <em>Author: <strong><%= @article.author.name %></strong></em>
+      <p class='body-text'><%= @article.text %></p>
+      <%= link_to "Home",  users_path, class: 'btn btn-warning text-unstyled' %>
+    </div>
+  </div>
+</div>
