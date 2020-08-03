@@ -92,8 +92,6 @@ GEM
     excon (0.76.0)
     execjs (2.7.0)
     ffi (1.13.1)
-    figaro (1.2.0)
-      thor (>= 0.14.0, < 2)
     fog-aws (3.6.6)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -135,7 +133,6 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2020.0512)
     mimemagic (0.3.5)
-    mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
@@ -281,11 +278,9 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave (~> 0.11.2)
-  figaro
   fog-aws
   jbuilder (~> 2.7)
   listen (~> 3.2)
-  mini_magick (~> 4.3)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
