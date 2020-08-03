@@ -102,6 +102,7 @@ Give a ⭐️ if you like this project!
 
 [Microverse](https://.microverse.org/)
 [Design Idea by Nelson Sakwa on Behance](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+[Full project specification](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561)
 
 ## 📝 License
 
