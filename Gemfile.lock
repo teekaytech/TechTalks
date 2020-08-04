@@ -93,6 +93,8 @@ GEM
     excon (0.76.0)
     execjs (2.7.0)
     ffi (1.13.1)
+    figaro (1.2.0)
+      thor (>= 0.14.0, < 2)
     fog-aws (3.6.6)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -284,6 +286,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave (~> 2.0)
+  figaro
   fog-aws
   jbuilder (~> 2.7)
   listen (~> 3.2)

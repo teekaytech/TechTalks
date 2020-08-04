@@ -36,6 +36,12 @@ gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 
+# Using cloud storage (aws)
+gem 'fog-aws'
+
+# Setting environment variable with figaro
+gem 'figaro'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
