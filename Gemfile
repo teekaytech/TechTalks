@@ -33,9 +33,8 @@ gem 'bootstrap', '~> 4.5'
 gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 
 # Add carrierwave for image processing
-gem 'carrierwave', '~> 0.11.2'
-# gem 'figaro'
-# gem 'mini_magick', '~> 4.3'
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
