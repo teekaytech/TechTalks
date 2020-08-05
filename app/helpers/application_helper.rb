@@ -11,7 +11,8 @@ module ApplicationHelper
 
   def banner_image
     context = featured_article
-    image_tag 'default_banner.jpg', class: 'w-100 h-100 f-image img-fluid' if context.nil?
+    return image_tag 'default_banner.jpg', class: 'w-100 h-100 f-image img-fluid' if context.nil?
+
     image_tag context.image.banner.url, class: 'w-100 h-100 f-image img-fluid'
   end
 

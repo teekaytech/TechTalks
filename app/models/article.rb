@@ -11,7 +11,6 @@ class Article < ApplicationRecord
   has_many :categories, through: :article_categories
 
   scope :sort_by_most_recent, -> { order(created_at: :desc) }
-  scope :check_categories, ->(p) { p.nil? }
 
   private
 
