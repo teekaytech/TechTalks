@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
       flash[:success] = 'Article created successfully.'
       redirect_to users_path
     else
+      flash[:danger] = 'Article could not be created, please try again.'
       render action: :new
     end
   end
