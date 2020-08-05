@@ -39,4 +39,22 @@ module ApplicationHelper
       image_tag 'default_logo.png', class: 'mt-4 img-fluid'
     end
   end
+
+  def header_navigations(user)
+    if user
+      content_tag(:li, link_to('categories', categories_path),
+                  class: 'nav-item') +
+        content_tag(:li, link_to(
+                           'Write an Article', new_user_article_path(user)
+                         ), class: 'nav-item') +
+        content_tag(:li,
+                    link_to('logout', logout_path(user), method: :delete),
+                    class: 'nav-item')
+    else
+      content_tag(:li, link_to('Login', login_path),
+                  class: 'nav-item') +
+        content_tag(:li, link_to('Register', signup_path),
+                    class: 'nav-item pl-2')
+    end
+  end
 end
