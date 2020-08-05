@@ -8,4 +8,35 @@ module ApplicationHelper
 
     category.articles.recent_article
   end
+
+  def banner_image
+    context = featured_article
+    image_tag 'default_banner.jpg', class: 'w-100 h-100 f-image img-fluid' if context.nil?
+    image_tag context.image.banner.url, class: 'w-100 h-100 f-image img-fluid'
+  end
+
+  def banner_header(user, article)
+    content_tag :div, class: 't-header ml-3' do
+      if article.nil?
+        content_tag(:p, 'Welcome to TechTalks', class: 'm-0 p-0') +
+          content_tag(:em, 'Home of tech - related articles...', class: 'sub-header')
+      else
+        link_to(article.title, user_article_path(user, article), class: 't-link mb-1 d-block') +
+          content_tag(:p, article.text.truncate(100), class: 'l-header')
+      end
+    end
+  end
+
+  def categories_thumbnails(category, user)
+    if !category_with_recent_article(category).nil?
+      image_tag(category_with_recent_article(category).image.thumb.url,
+                class: 'w-100 h-100 f-image img-fluid') +
+        link_to(category_with_recent_article(category).title,
+                user_article_path(
+                  user, category_with_recent_article(category)
+                ), class: 'details-title')
+    else
+      image_tag 'default_logo.png', class: 'mt-4 img-fluid'
+    end
+  end
 end
