@@ -20,7 +20,7 @@
         Voted
       <% else %>
         <span class='v-button'>
-          <%= link_to 'Vote', user_article_votes_path(current_user, article), method: :post %>
+          <%= vote_article(current_user, article) %>
         </span>
       <% end %>
     </article>

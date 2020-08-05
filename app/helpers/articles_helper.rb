@@ -19,4 +19,8 @@ module ArticlesHelper
   def check_vote_status(user, article)
     article.votes.exists?(user_id: user.id)
   end
+
+  def vote_article(user, article)
+    link_to 'Vote', user_article_votes_path(user, article), method: :post
+  end
 end
