@@ -3,11 +3,16 @@
     <%= image_tag featured_article.nil? ? 'default_banner.jpg' : featured_article.image.banner.url, 
       class: 'w-100 h-100 f-image img-fluid' %>
     <div class="title">
+      <div class='t-header ml-3'>
         <% if featured_article.nil? %>
-          <p class='t-header ml-3'>Welcome to TechTalks</p>
+            <p class='m-0 p-0'>Welcome to TechTalks </p>
+            <em class='sub-header'>Home of tech - related articles...</em>
         <% else %>
-          <%= link_to featured_article.title, user_article_path(current_user, featured_article), class: 't-header ml-3' %>
+          <%= link_to featured_article.title, user_article_path(current_user, featured_article),
+              class: 't-link mb-1 d-block' %>
+          <p class='l-header'><%= featured_article.text.truncate(100) %></p>
         <% end %>
+      </div>
     </div>
   </article>
 </section>

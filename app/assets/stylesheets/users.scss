@@ -4,6 +4,13 @@
 $grey-header: #999;
 $text-hover: #fd6000;
 $bg-color: #4e443e;
+$text: #fff;
+
+@mixin banner-mix {
+  font-weight: bolder;
+  color: $text-hover;
+  text-shadow: 0.06em 0.08em $bg-color;
+}
 
 .all-categories {
   background-color: #f1d79e;
@@ -33,10 +40,20 @@ $bg-color: #4e443e;
     bottom: 1em;
 
     .t-header {
-      font-weight: bolder;
-      color: $text-hover;
-      text-shadow: 0.06em 0.08em $bg-color;
-      font-size: 3em;
+      @include banner-mix;
+      font-size: 1.6em;
+      .sub-header {
+        color: $text;
+        font-size: 0.8em;
+      }
+      .t-link {
+        @include banner-mix;
+        font-size: 1em;
+      }
+      .l-header {
+        color: $text;
+        font-size: 0.7em;
+      }
     }
 
     a {
@@ -49,7 +66,7 @@ $bg-color: #4e443e;
 }
 
 .articles-thumb {
-  height: 14em;
+  height: 13em;
   display: inline-block;
   width: 20%;
   position: relative;
@@ -66,7 +83,7 @@ $bg-color: #4e443e;
 
   .details-title {
     text-decoration: none;
-    color: $text-hover;
+    color: $text;
     position: absolute;
     bottom: 1em;
     left: 0.5em;

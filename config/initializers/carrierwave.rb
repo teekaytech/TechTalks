@@ -11,13 +11,4 @@ CarrierWave.configure do |config|
   config.fog_directory = ENV['AWS_BUCKET']
   config.fog_public = false
   config.cache_dir = "#{Rails.root}/tmp/uploads"
-
-  # store files locally in test and development environments
-  if Rails.env.test? || Rails.env.development?
-    config.storage = :file
-    config.enable_processing = false
-    config.root = "#{Rails.root}/tmp"
-  else
-    config.storage = :fog
-  end
 end

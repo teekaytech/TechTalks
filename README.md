@@ -2,7 +2,7 @@
 
 > This is my Ruby on Rails capstone project at microverse. It is a platform for posting tech-related articles. Users can register/sign-in, create new article(s), read and vote for existing articles. The full project specifications are specified [here](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561).
 
-![screenshot](/app/assets/images/default_logo.png)
+![screenshot](/app/assets/images/screenshot.png)
 
 ## Built With
 
