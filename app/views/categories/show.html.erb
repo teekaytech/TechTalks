@@ -16,13 +16,7 @@
       <span class='font-italic mb-2 mr-3'>Author: 
         <strong><%= article.author.name %></strong>
       </span>
-      <% if check_vote_status(current_user, article) %>
-        Voted
-      <% else %>
-        <span class='v-button'>
-          <%= vote_article(current_user, article) %>
-        </span>
-      <% end %>
+      <%= vote_button_message(current_user, article) %>
     </article>
     <% end %>
   </div>

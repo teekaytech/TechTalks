@@ -23,4 +23,12 @@ module ArticlesHelper
   def vote_article(user, article)
     link_to 'Vote', user_article_votes_path(user, article), method: :post
   end
+
+  def vote_button_message(user, article)
+    if check_vote_status(user, article)
+      content_tag(:span, 'Voted')
+    else
+      content_tag(:span, vote_article(user, article), class: 'v-button')
+    end
+  end
 end

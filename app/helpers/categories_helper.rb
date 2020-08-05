@@ -8,6 +8,4 @@ module CategoriesHelper
 
     recent_article(category.articles)
   end
-
-  
 end
