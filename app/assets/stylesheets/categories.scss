@@ -1,9 +1,7 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$grey-header: #999;
-$text-hover: #fd6000;
-$bg-color: #4e443e;
+@import 'application.scss';
 
 .c-name {
   color: $text-hover;

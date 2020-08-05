@@ -1,6 +1,7 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'application.scss';
 
 .title {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -11,4 +12,16 @@
   margin-top: 1.5em;
   font-style: oblique;
   font-size: larger;
+}
+
+.b-color {
+  @include bg-color;
+}
+
+.m-color {
+  background-color: $text-hover;
+}
+
+.buttons {
+  @include buttons;
 }

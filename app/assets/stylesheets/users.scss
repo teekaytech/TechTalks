@@ -1,10 +1,7 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$grey-header: #999;
-$text-hover: #fd6000;
-$bg-color: #4e443e;
-$text: #fff;
+@import 'application.scss';
 
 @mixin banner-mix {
   font-weight: bolder;
@@ -96,10 +93,13 @@ $text: #fff;
 }
 
 .b-color {
-  border: 0.2em solid #fd6000;
-  border-radius: 0.5em;
+  @include bg-color;
 }
 
 .m-color {
-  background-color: #fd6000;
+  background-color: $text-hover;
+}
+
+.buttons {
+  @include buttons;
 }
