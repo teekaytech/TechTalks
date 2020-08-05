@@ -9,6 +9,7 @@
     <ul class='navbar-nav ml-auto'>
       <li class="nav-item"><%= link_to "home", users_path %></li>
       <% if current_user %>
+        <li class="nav-item"><%= link_to "categories", categories_path %></li>
         <li class="nav-item"><%= link_to 'Write an Article', new_user_article_path(current_user) %></li>
         <li class="nav-item"><%= link_to "logout", logout_path(current_user), method: :delete %></li>
       <%else%>

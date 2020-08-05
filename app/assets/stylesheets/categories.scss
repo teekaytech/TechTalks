@@ -35,3 +35,7 @@ a.read-more {
     }
   }
 }
+
+.all-cat {
+  @include banner-mix;
+}

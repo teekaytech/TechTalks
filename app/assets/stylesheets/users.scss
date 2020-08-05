@@ -3,12 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'application.scss';
 
-@mixin banner-mix {
-  font-weight: bolder;
-  color: $text-hover;
-  text-shadow: 0.06em 0.08em $bg-color;
-}
-
 .all-categories {
   background-color: #f1d79e;
 

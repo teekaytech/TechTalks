@@ -44,3 +44,9 @@ $text: #fff;
   display: inline-block;
   font-size: 1em;
 }
+
+@mixin banner-mix {
+  font-weight: bolder;
+  color: $text-hover;
+  text-shadow: 0.06em 0.08em $bg-color;
+}

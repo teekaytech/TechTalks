@@ -5,4 +5,6 @@ class Category < ApplicationRecord
   has_many :articles, through: :article_categories
 
   scope :order_by_priority, -> { order(priority: :asc) }
+
+  scope :with_articles, -> { includes(:articles) }
 end
