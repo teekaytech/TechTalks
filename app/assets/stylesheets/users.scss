@@ -32,15 +32,20 @@
 
     .t-header {
       @include banner-mix;
+
       font-size: 1.6em;
+
       .sub-header {
         color: $text;
         font-size: 0.8em;
       }
+
       .t-link {
         @include banner-mix;
+
         font-size: 1em;
       }
+
       .l-header {
         color: $text;
         font-size: 0.7em;
