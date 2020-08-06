@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
   def store_article_with_categories(article, categories)
     if article.save
-      categories.each_value do |cat_id|
+      categories.each do |cat_id|
         article.article_categories.build(category_id: cat_id).save
       end
       flash[:success] = 'Article created successfully.'
