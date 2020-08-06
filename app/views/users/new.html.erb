@@ -2,7 +2,7 @@
   <div class="offset-3 col-6 b-color p-0">
     <h5 class="text-center m-color py-3 text-white font-weight-bold">New User</h5>
     <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'users/error_messages' %>
+      <%= user_error_messages(@user) %>
       <div class="px-4 mt-4">
         <div class="form-group mb-4">
           <%= f.label :name %>

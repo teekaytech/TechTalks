@@ -31,4 +31,10 @@ module ArticlesHelper
       content_tag(:span, vote_article(user, article), class: 'v-button')
     end
   end
+
+  def article_error_messages(article)
+    return unless article.errors.any?
+
+    render partial: 'article/error_messages'
+  end
 end
