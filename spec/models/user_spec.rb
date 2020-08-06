@@ -18,6 +18,11 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'is valid when username is present' do
+    subject.username = 'myusername'
+    expect(subject).to be_valid
+  end
+
   it 'is invalid when length of name is less than 5' do
     subject.name = 'this'
     expect(subject).to_not be_valid
@@ -26,6 +31,11 @@ RSpec.describe User, type: :model do
   it 'is invalid without a valid email' do
     subject.email = 'testuser@'
     expect(subject).to_not be_valid
+  end
+
+  it 'is valid with a valid email' do
+    subject.email = 'testuser@gmail.com'
+    expect(subject).to be_valid
   end
 
   describe 'Associations' do

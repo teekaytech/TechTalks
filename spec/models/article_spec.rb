@@ -20,9 +20,24 @@ RSpec.describe Article, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'is valid when title is not blank' do
+    subject.title = 'Capstone Project'
+    expect(subject).to be_valid
+  end
+
   it 'is invalid when text is blank' do
     subject.text = nil
     expect(subject).to_not be_valid
+  end
+
+  it 'is valid when text is not blank' do
+    subject.text = 'Here is the summary of the project' * 5
+    expect(subject).to be_valid
+  end
+
+  it 'is valid when image is attached' do
+    subject.image = 'myimage.jpg'
+    expect(subject).to be_valid
   end
 
   describe 'Associations' do
