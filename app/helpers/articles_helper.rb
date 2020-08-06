@@ -35,6 +35,6 @@ module ArticlesHelper
   def article_error_messages(article)
     return unless article.errors.any?
 
-    render partial: 'article/error_messages'
+    render partial: 'articles/error_messages'
   end
 end
