@@ -20,15 +20,15 @@ module ArticlesHelper
     article.votes.exists?(user_id: user.id)
   end
 
-  def vote_article(user, article)
-    link_to 'Vote', user_article_votes_path(user, article), method: :post
+  def vote_article(article)
+    link_to('Vote', article_votes_path(article), method: :post)
   end
 
   def vote_button_message(user, article)
     if check_vote_status(user, article)
       content_tag(:span, 'Voted')
     else
-      content_tag(:span, vote_article(user, article), class: 'v-button')
+      content_tag(:span, vote_article(article), class: 'v-button')
     end
   end
 

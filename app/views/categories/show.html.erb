@@ -1,23 +1,23 @@
 <div class="container-fluid p-0">
   <div class="row m-0">
     <% @category.articles.sort_by_most_recent.each do |article| %>
-    <article class="col-md-3 p-0">
-      <%= image_tag article.image.ishow.url, class: 'img-fluid' %> 
-    </article>
-    <article class="col-md-3 p-3">
-      <h2 class='c-name mb-3'><%= @category.name %></h2>
-      <h5 class='a-title'><%= article.title %></h5>
-      <p class='mb-3'>
-        <%= article.text.truncate(50) %>
-        <em>
-          <%= link_to 'read more', user_article_path(current_user, article), class: 'read-more' %>
-        </em>
-      </p>
-      <span class='font-italic mb-2 mr-3'>Author: 
-        <strong><%= article.author.name %></strong>
-      </span>
-      <%= vote_button_message(current_user, article) %>
-    </article>
+      <article class="col-md-3 p-0">
+        <%= image_tag article.image.ishow.url, class: 'img-fluid' %> 
+      </article>
+      <article class="col-md-3 p-3">
+        <h2 class='c-name mb-3'><%= @category.name %></h2>
+        <h5 class='a-title'><%= article.title %></h5>
+        <p class='mb-3'>
+          <%= article.text.truncate(50) %>
+          <em>
+            <%= link_to 'read more', article_path(article), class: 'read-more' %>
+          </em>
+        </p>
+        <span class='font-italic mb-2 mr-3'>Author: 
+          <strong><%= article.author.name %></strong>
+        </span>
+        <%= vote_button_message(current_user, article) %>
+      </article>
     <% end %>
   </div>
 </div>

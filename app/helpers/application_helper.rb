@@ -16,13 +16,13 @@ module ApplicationHelper
     image_tag context.image.banner.url, class: 'w-100 h-100 f-image img-fluid'
   end
 
-  def banner_header(user, article)
+  def banner_header(article)
     content_tag :div, class: 't-header ml-3' do
       if article.nil?
         content_tag(:p, 'Welcome to TechTalks', class: 'm-0 p-0') +
           content_tag(:em, 'Home of tech - related articles...', class: 'sub-header')
       else
-        link_to(article.title, user_article_path(user, article), class: 't-link mb-1 d-block') +
+        link_to(article.title, article_path(article), class: 't-link mb-1 d-block') +
           content_tag(:p, article.text.truncate(100), class: 'l-header')
       end
     end
@@ -33,7 +33,7 @@ module ApplicationHelper
       image_tag(category_with_recent_article(category).image.thumb.url,
                 class: 'w-100 h-100 f-image img-fluid') +
         link_to(category_with_recent_article(category).title,
-                user_article_path(
+                article_path(
                   user, category_with_recent_article(category)
                 ), class: 'details-title')
     else
@@ -46,7 +46,7 @@ module ApplicationHelper
       content_tag(:li, link_to('categories', categories_path),
                   class: 'nav-item') +
         content_tag(:li, link_to(
-                           'Write an Article', new_user_article_path(user)
+                           'Write an Article', new_article_path
                          ), class: 'nav-item') +
         content_tag(:li,
                     link_to('logout', logout_path(user), method: :delete),
