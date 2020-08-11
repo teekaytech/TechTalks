@@ -14,3 +14,39 @@
  *= require_self
  */
 @import "bootstrap";
+
+$grey-header: #999;
+$text-hover: #fd6000;
+$bg-color: #4e443e;
+$text: #fff;
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin bg-color {
+  border: 0.2em solid $text-hover;
+  border-radius: 0.5em;
+}
+
+@mixin buttons {
+  background-color: $text-hover;
+  border: none;
+  color: white;
+  padding: 0.3em 0.8em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
+@mixin banner-mix {
+  font-weight: bolder;
+  color: $text-hover;
+  text-shadow: 0.06em 0.08em $bg-color;
+}

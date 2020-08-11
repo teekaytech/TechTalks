@@ -12,6 +12,10 @@ class Article < ApplicationRecord
 
   scope :sort_by_most_recent, -> { order(created_at: :desc) }
 
+  def check_category(category)
+    category.nil? ? true : false
+  end
+
   private
 
   def image_size_validation

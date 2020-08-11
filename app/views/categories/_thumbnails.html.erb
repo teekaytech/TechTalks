@@ -1,0 +1,6 @@
+<% categories_by_priority.each do |category| %>
+  <article class="articles-thumb text-white font-weight-bolder">
+  <%= link_to category.name, category_path(category), class: 'article-details text-white' %>
+  <%= categories_thumbnails(category, current_user) %>
+  </article>
+<% end %>

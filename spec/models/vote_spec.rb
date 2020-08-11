@@ -15,6 +15,10 @@ RSpec.describe Vote, type: :model do
     described_class.new(user_id: user.id, article_id: article.id)
   end
 
+  it 'is valid when all attributes are present' do
+    expect(subject).to be_valid
+  end
+
   describe 'Associations' do
     it { should belong_to(:user) }
     it { should belong_to(:article) }

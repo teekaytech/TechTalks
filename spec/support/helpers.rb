@@ -13,12 +13,20 @@ module Helpers
     click_button('commit')
   end
 
-  def create_article(title, txt, id)
+  def create_article(title, txt)
     click_link('Write an Article')
     fill_in('article_title', with: title)
     fill_in('article_text', with: txt)
     attach_file('article_image', './spec/support/test_img.jpg')
-    check("categories_#{id}")
+    check('categories_')
+    click_button('commit')
+  end
+
+  def create_article_without_category(title, txt)
+    click_link('Write an Article')
+    fill_in('article_title', with: title)
+    fill_in('article_text', with: txt)
+    attach_file('article_image', './spec/support/test_img.jpg')
     click_button('commit')
   end
 end

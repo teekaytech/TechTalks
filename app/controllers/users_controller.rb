@@ -16,6 +16,7 @@ class UsersController < ApplicationController
       helpers.log_in(@user)
       redirect_to users_path
     else
+      flash[:danger] = 'Unable to create your account, please try again.'
       render 'new'
     end
   end

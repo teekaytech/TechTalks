@@ -1,8 +1,8 @@
-# TechTalks Platform
+# Lifestyle Articles (Theme: TechTalks Platform)
 
 > This is my Ruby on Rails capstone project at microverse. It is a platform for posting tech-related articles. Users can register/sign-in, create new article(s), read and vote for existing articles. The full project specifications are specified [here](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561).
 
-![screenshot](/app/assets/images/default_logo.png)
+![screenshot](/app/assets/images/screenshot.png)
 
 ## Built With
 
@@ -10,6 +10,9 @@
 - Ruby on Rails v6.0.3
 - Rspec / Capybara
 - PGSQL
+- AWS S3 Storage
+- Bootstrap
+- Heroku
 
 ## Live Demo
 [TeckTalks!](https://vast-citadel-76441.herokuapp.com/)
@@ -46,29 +49,24 @@ bundle install
 Setup database with:
 
 ```
-   rails db:create
-   rails db:migrate
+   rails db:create && rails db:migrate && rails db:seed
 ```
 
-Seed database with:
-
-```
-   rails db:seed
-```
-
+### Settng up AWS Access Key
+To setup AWS access keys and other resources for file upload storage, follow [these instructions](http://blog.thefirehoseproject.com/posts/switching-carrierwave-to-use-s3-with-heroku-and-localhost/) to:
+- Open an account on AWS and create S3 bucket storage
+- Create a new user and get the keys/credentials
+- Setup the credentials to get started
 
 ### Usage
 
 Start server with:
-
-```
-    rails server
-```
+`rails server`
 
 Open `http://localhost:3000/` in your browser.
 
 ### Run tests
-
+Navigate to the project root directory and type:
 ```
     rpsec --format documentation
 ```
@@ -102,7 +100,7 @@ Give a ⭐️ if you like this project!
 - [Microverse](https://.microverse.org/)
 - [Design Idea by Nelson Sakwa on Behance](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
 - [Full project specification](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561)
-
+- [Switching CarrierWave to use S3 with Heroku and localhost](http://blog.thefirehoseproject.com/posts/switching-carrierwave-to-use-s3-with-heroku-and-localhost/)
 
 ## 📝 License
 

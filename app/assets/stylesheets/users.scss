@@ -1,9 +1,7 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$grey-header: #999;
-$text-hover: #fd6000;
-$bg-color: #4e443e;
+@import 'application.scss';
 
 .all-categories {
   background-color: #f1d79e;
@@ -20,40 +18,51 @@ $bg-color: #4e443e;
   }
 }
 
-.b-container {
-  background-color: $bg-color;
+.featured-article {
+  position: relative;
+  height: 28em;
 
-  .featured-article {
-    position: relative;
-    height: 28em;
+  .f-image {
+    height: 100%;
+  }
 
-    .f-image {
-      height: 100%;
-    }
+  .title {
+    position: absolute;
+    bottom: 1em;
 
-    .title {
-      position: absolute;
-      bottom: 1em;
+    .t-header {
+      @include banner-mix;
 
-      .t-header {
-        font-weight: bolder;
-        color: $text-hover;
-        text-shadow: 0.06em 0.08em $bg-color;
-        font-size: 3em;
+      font-size: 1.6em;
+
+      .sub-header {
+        color: $text;
+        font-size: 0.8em;
       }
 
-      a {
-        &:hover {
-          text-decoration: none;
-          color: $grey-header;
-        }
+      .t-link {
+        @include banner-mix;
+
+        font-size: 1em;
+      }
+
+      .l-header {
+        color: $text;
+        font-size: 0.7em;
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration: none;
+        color: $grey-header;
       }
     }
   }
 }
 
 .articles-thumb {
-  height: 14em;
+  height: 13em;
   display: inline-block;
   width: 20%;
   position: relative;
@@ -70,7 +79,7 @@ $bg-color: #4e443e;
 
   .details-title {
     text-decoration: none;
-    color: $text-hover;
+    color: $text;
     position: absolute;
     bottom: 1em;
     left: 0.5em;
@@ -83,10 +92,13 @@ $bg-color: #4e443e;
 }
 
 .b-color {
-  border: 0.2em solid #fd6000;
-  border-radius: 0.5em;
+  @include bg-color;
 }
 
 .m-color {
-  background-color: #fd6000;
+  background-color: $text-hover;
+}
+
+.buttons {
+  @include buttons;
 }

@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(article_params)
-    if params[:categories].nil?
+    if @article.check_category(params[:categories])
       flash[:danger] = 'Please select at least one category.'
       render action: :new
     else
@@ -22,6 +22,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(%i[author_id title text image])
+    params.require(:article).permit(%i[author_id title text image], [:categories])
   end
 end
