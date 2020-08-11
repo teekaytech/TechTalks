@@ -14,7 +14,7 @@
     <%= f.label :categories, 'Select a Category:' %><br />
     <div class="row">
       <% categories.each_with_index do |category| %>
-        <div class="col-4">
+        <div class="col-md-4 col-sm-6 col-lg-3">
           <%= check_box_tag("categories[]", category.id) %>
           <%= label_tag(category.name) %> 
         </div>
