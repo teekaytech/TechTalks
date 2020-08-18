@@ -10,17 +10,12 @@
       </div>
 
       <div class="form-group text-right">
+      <span class='pull-left'>Login with: 
+      <%= link_to image_tag('twitter.png', class: 'w-25 img-fluid'), "/auth/twitter"%></span>
       <%= link_to "Register", new_user_path, class: 'pr-2 t-color' %>
         <%= f.submit 'Log in', class: 'buttons' %>
       </div>
     </div> 
-    <% end %>
-  </div>
-  <div class="offset-3 col-6 p-0 mt-5">
-    <h4>Quick Login</h4>
-    <p>Click on any of the usernames below to login as the user</p>
-    <% @users.each do |user| %>
-      <%= link_to(user.username, quick_login_path(user), method: :post) %>
     <% end %>
   </div>
 </div>

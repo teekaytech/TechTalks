@@ -7,4 +7,17 @@ class User < ApplicationRecord
   has_many :articles, class_name: 'Article', foreign_key: 'author_id',
                       dependent: :destroy
   has_many :votes, dependent: :destroy
+
+  def self.from_omniauth(auth)
+    username = auth['info']['nickname']
+    where(username: username).first || create_from_omniauth(auth)
+  end
+
+  def self.create_from_omniauth(auth)
+    create! do |user|
+      user.name = auth['info']['name']
+      user.username = auth['info']['nickname']
+      user.email = auth['info']['email'] || 'user@email.com'
+    end
+  end
 end

@@ -42,6 +42,9 @@ gem 'fog-aws'
 # Setting environment variable with figaro
 gem 'figaro'
 
+# Using omniauth twitter gem
+gem 'omniauth-twitter'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -62,7 +65,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'aro'
+  gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
