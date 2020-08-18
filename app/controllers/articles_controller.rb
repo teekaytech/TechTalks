@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.includes(:author).find(params[:id])
+    @article = Article.includes(%i[author votes]).find(params[:id])
   end
 
   private

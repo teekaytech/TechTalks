@@ -28,14 +28,12 @@ module ApplicationHelper
     end
   end
 
-  def categories_thumbnails(category, user)
+  def categories_thumbnails(category)
     if !category_with_recent_article(category).nil?
       image_tag(category_with_recent_article(category).image.thumb.url,
                 class: 'w-100 h-100 f-image img-fluid') +
         link_to(category_with_recent_article(category).title,
-                article_path(
-                  user, category_with_recent_article(category)
-                ), class: 'details-title')
+                article_path(category_with_recent_article(category)), class: 'details-title')
     else
       image_tag 'default_logo.png', class: 'mt-4 img-fluid'
     end
