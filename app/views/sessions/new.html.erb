@@ -15,5 +15,12 @@
       </div>
     </div> 
     <% end %>
-  </div>  
+  </div>
+  <div class="offset-3 col-6 p-0 mt-5">
+    <h4>Quick Login</h4>
+    <p>Click on any of the usernames below to login as the user</p>
+    <% @users.each do |user| %>
+      <%= link_to(user.username, quick_login_path(user), method: :post) %>
+    <% end %>
+  </div>
 </div>
