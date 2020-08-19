@@ -9,12 +9,15 @@
         <%= f.text_field :username, class: 'form-control', required: true %>
       </div>
 
-      <div class="form-group text-right">
-        <span class='pull-left t-color'>Login with: 
-          <%= link_to image_tag('twitter.png', class: 'w-25 img-fluid'), "/auth/twitter"%>
+      <div class="form-group d-flex justify-content-between">
+        <span class='t-color mt-1'>Login with: 
+          <%= link_to image_tag('twitter.png', class: 'l-s img-fluid'), "/auth/twitter"%>
+          <%= link_to image_tag('google.png', class: 'l-s img-fluid'), "/auth/google_oauth2"%>
         </span>
-        <%= link_to "Register", new_user_path, class: 'pr-2 t-color' %>
-        <%= f.submit 'Log in', class: 'buttons' %>
+        <span>
+          <%= link_to "Register", new_user_path, class: 'pr-2 t-color' %>
+          <%= f.submit 'Log in', class: 'buttons' %>
+        </span>
       </div>
     </div> 
     <% end %>

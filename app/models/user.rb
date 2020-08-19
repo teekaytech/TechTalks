@@ -16,7 +16,7 @@ class User < ApplicationRecord
   def self.create_from_omniauth(auth)
     create! do |user|
       user.name = auth['info']['name']
-      user.username = auth['info']['nickname']
+      user.username = auth['info']['nickname'] || auth['extra']['raw_info']['given_name']
       user.email = auth['info']['email'] || 'user@email.com'
     end
   end

@@ -8,9 +8,14 @@ class SessionsController < ApplicationController
     do_login(@user)
   end
 
-  def register
+  def external_auth
     @user = User.from_omniauth(request.env['omniauth.auth'])
     do_login(@user)
+  end
+
+  def failure
+    flash[:error] = 'There was a problem signing you in. Please register or try signing in later.'
+    redirect_to login_path
   end
 
   def destroy

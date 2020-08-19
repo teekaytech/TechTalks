@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   end
   resources :categories, only: %i[show index]
 
-  get 'auth/:provider/callback', to: 'sessions#register'
-  get 'auth/failure', to: redirect('/')
+  get 'auth/:provider/callback', to: 'sessions#external_auth'
+  get 'auth/failure', to: 'sessions#failure'
 end
