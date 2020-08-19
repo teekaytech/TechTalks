@@ -13,6 +13,7 @@
 - AWS S3 Storage
 - Bootstrap
 - Heroku
+- Rails Omniauth Gem
 
 ## Live Demo
 [TeckTalks!](https://vast-citadel-76441.herokuapp.com/)
@@ -57,6 +58,10 @@ To setup AWS access keys and other resources for file upload storage, follow [th
 - Open an account on AWS and create S3 bucket storage
 - Create a new user and get the keys/credentials
 - Setup the credentials to get started
+
+
+### Setting up Omniauth Gem (Twitter & Google)
+Kindly follow the step-by-step instructions on how to setup authentication with third party apps (Twitter, Google) on [Omniauth Gem official documentation page](https://github.com/zquestz/omniauth-google-oauth2)
 
 ### Usage
 
