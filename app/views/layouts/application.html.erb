@@ -4,6 +4,14 @@
     <title>Tech Talks</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta property="og:title" content="Lifestyle blog - TechTalks!" />
+    <meta property="og:url" content="https://vast-citadel-76441.herokuapp.com" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/teekaytech/TechTalks/development/app/assets/images/screenshot.png/">
+    <meta property="og:description"
+      content="This is my Ruby on Rails capstone project at microverse. It is a platform for posting tech-related articles. Users can register/sign-in, create new article(s), read and vote for existing articles. The project is built with SASS, Ruby on Rails, PGSQL, and deployed on Heroku."
+    />
     <%# <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
