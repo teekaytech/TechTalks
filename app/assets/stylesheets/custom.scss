@@ -1,4 +1,4 @@
-@import 'application.scss';
+@import "application.scss";
 
 @mixin flex-style {
   display: flex;
@@ -55,11 +55,15 @@ body {
   .footer {
     background-color: $bg-color;
 
-    @include flex-style;
     @include view-default;
 
     .f-logo {
-      width: 65%;
+      width: 60%;
+    }
+
+    .f-display {
+      display: table-cell;
+      vertical-align: middle;
     }
 
     .socials {
