@@ -33,7 +33,7 @@ gem 'bootstrap', '~> 4.5'
 gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 
 # Add carrierwave for image processing
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'mini_magick'
 
 # Using cloud storage (aws)
